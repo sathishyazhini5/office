@@ -1,0 +1,67 @@
+/* mat-card {
+    max-width: 450px;
+    margin: auto;
+  }
+  
+  form {
+    display: flex;
+    flex-wrap: wrap; 
+  } */
+  
+  body, html {
+    height: 100%;
+    margin: 0;
+    /* background: rgb(238, 174, 202);
+    background: radial-gradient(circle, rgba(238, 174, 202, 1) 0%, rgba(148, 187, 233, 1) 100%); */
+  }
+  
+  mat-card {
+    max-width: 1000px;
+    margin: auto; 
+    margin-top: 50px;
+    margin-bottom: -5px;
+    margin-left: 260px;
+    border: none;
+    /* background: rgb(238,174,202);
+    background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);   */
+    cursor: pointer;
+  }
+  
+  form {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 16px; /* Adjust the gap between grid items */
+  }
+  
+  /* Optionally, for small screens, set a full width for each form field */
+  @media (max-width: 600px) {
+    form {
+      grid-template-columns: 1fr; /* Single column for small screens */
+    }
+  }
+
+  mat-card-title
+  {
+    margin-left: 400px;
+    margin-bottom: 30px;
+    margin-top: 10px;
+    font-weight: bolder;
+    font-size: 16pt;
+  }
+  .mat-datepicker-input {
+    width: 200px; /* Set the desired width */
+  }
+  .mat-datepicker-toggle {
+    margin-left: -40px; /* Adjust the position of the datepicker toggle icon if needed */
+  }
+  
+.gender mat-label {
+    font-size: 16px; 
+    font-weight: bold;
+}  
+
+
+  
+  
+
+  

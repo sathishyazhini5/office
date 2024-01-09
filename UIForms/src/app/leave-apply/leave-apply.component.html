@@ -1,0 +1,97 @@
+<mat-card>
+    <mat-card-header>
+        <mat-card-title>Employee Form</mat-card-title>
+    </mat-card-header>
+
+    <mat-card-content>
+        <form [formGroup]="leaveapplyform">
+            <div class="empid">
+                <mat-form-field apprearance="fill">
+                    <mat-label>Employee Id</mat-label>
+                    <input type="text" matInput placeholder="Enter your id" formControlName="EmployeeId">
+                </mat-form-field>
+            </div>
+
+            <div class="leavetype">
+                <mat-form-field apprearance="fill">
+                    <mat-label>LeaveType</mat-label>
+                    <input type="text" matInput placeholder="Enter leavetype" formControlName="LeaveType">
+                </mat-form-field>
+            </div>
+
+            <div class="fromdate">
+                <mat-form-field>
+                  <mat-label>From Date</mat-label>
+                  <input matInput [matDatepicker]="fromPicker" placeholder="MM/DD/YYYY" formControlName="FromDate">
+                  <mat-datepicker-toggle matSuffix [for]="fromPicker"></mat-datepicker-toggle>
+                  <mat-datepicker #fromPicker></mat-datepicker>
+                </mat-form-field>
+              </div>
+
+              
+              <div class="todate">
+                <mat-form-field>
+                  <mat-label>To Date</mat-label>
+                  <input matInput [matDatepicker]="toPicker" placeholder="MM/DD/YYYY" formControlName="ToDate">
+                  <mat-datepicker-toggle matSuffix [for]="toPicker"></mat-datepicker-toggle>
+                  <mat-datepicker #toPicker></mat-datepicker>
+                </mat-form-field>
+              </div>
+
+              <div class="noofdays">
+                <mat-form-field apprearance="fill">
+                    <mat-label>No Of Days</mat-label>
+                    <input type="number" matInput placeholder="Enter no of days" formControlName="NoOfDays">
+                </mat-form-field>
+            </div>
+
+            <div class="reason">
+                <mat-form-field apprearance="fill">
+                    <mat-label>reason</mat-label>
+                    <input type="text" matInput placeholder="Enter reason" formControlName="Reason">
+                </mat-form-field>
+            </div>
+
+            <div class="description">
+                <mat-form-field apprearance="fill">
+                    <mat-label>Description</mat-label>
+                    <input type="text" matInput placeholder="Enter description" formControlName="Description">
+                </mat-form-field>
+            </div>
+
+            <div class="applieddate">
+                <mat-form-field>
+                  <mat-label>Applied Date</mat-label>
+                  <input matInput [matDatepicker]="appliedPicker" placeholder="MM/DD/YYYY" formControlName="AppliedDate">
+                  <mat-datepicker-toggle matSuffix [for]="appliedPicker"></mat-datepicker-toggle>
+                  <mat-datepicker #appliedPicker></mat-datepicker>
+                </mat-form-field>
+              </div>
+              
+
+            <div class="approvalby">
+                <mat-form-field apprearance="fill">
+                    <mat-label>ApprovalBy</mat-label>
+                    <input type="text" matInput placeholder="Enter approvalby" formControlName="ApprovalBy">
+                </mat-form-field>
+            </div>
+
+            <div class="status">
+                <mat-form-field apprearance="fill">
+                    <mat-label>Status</mat-label>
+                    <input type="text" matInput placeholder="Enter status" formControlName="Status">
+                </mat-form-field>
+            </div>
+
+            
+
+            <div class="save">
+                <mat-card-actions>
+                    <button mat-raised-button color="primary" [disabled]="isSubmit" (click)="onSubmit()">Register</button>
+                </mat-card-actions>
+            </div>
+
+        </form>
+    </mat-card-content>
+</mat-card>
+

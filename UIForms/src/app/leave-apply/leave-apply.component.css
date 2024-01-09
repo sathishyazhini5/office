@@ -1,0 +1,45 @@
+  mat-card {
+    max-width: 800px;
+    margin: auto; 
+    margin-top: 50px;
+    margin-bottom: -5px;
+    margin-left: 260px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  form {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 16px; /* Adjust the gap between grid items */
+  }
+  
+  /* Optionally, for small screens, set a full width for each form field */
+  @media (max-width: 600px) {
+    form {
+      grid-template-columns: 1fr; /* Single column for small screens */
+    }
+  }
+
+  mat-card-title
+  {
+    margin-left: 400px;
+    margin-bottom: 30px;
+    margin-top: 10px;
+    font-weight: bolder;
+    font-size: 16pt;
+  }
+  .mat-datepicker-input {
+    width: 200px; /* Set the desired width */
+  }
+  .mat-datepicker-toggle {
+    margin-left: -40px; /* Adjust the position of the datepicker toggle icon if needed */
+  }
+  
+
+
+
+  
+  
+
+  

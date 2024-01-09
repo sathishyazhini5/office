@@ -1,0 +1,156 @@
+<!-- Employee form -->
+<body>
+    <br>
+<mat-card>
+    <mat-card-header>
+        <mat-card-title>Employee Form</mat-card-title>
+    </mat-card-header>
+
+    <mat-card-content>
+        <form [formGroup]="employeeform">
+            <div class="id">
+                <mat-form-field apprearance="fill">
+                    <mat-label>Employee Id</mat-label>
+                    <input type="text" matInput placeholder="Enter your id" formControlName="EmployeeId">
+                </mat-form-field>
+            </div>
+
+            <div class="fname">
+                <mat-form-field apprearance="fill">
+                    <mat-label>First Name</mat-label>
+                    <input type="text" matInput placeholder="Enter your first name" formControlName="Firstname">
+                </mat-form-field>
+            </div>
+
+            <div class="lname">
+                <mat-form-field apprearance="fill">
+                    <mat-label>Last Name</mat-label>
+                    <input type="text" matInput placeholder="Enter your last name" formControlName="lastname">
+                </mat-form-field>
+            </div>
+
+            <div class="dob">
+                <mat-form-field>
+                  <mat-label>Choose a date</mat-label>
+                  <input matInput [matDatepicker]="picker" placeholder="MM/DD/YYYY">
+                  <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                  <mat-datepicker [dateClass]="dateClass" #picker></mat-datepicker>
+                </mat-form-field>
+              </div>
+
+              <div class="fathername">
+                <mat-form-field apprearance="fill">
+                    <mat-label>Father Name</mat-label>
+                    <input type="text" matInput placeholder="Enter your father name" formControlName="Fathername">
+                </mat-form-field>
+            </div>
+
+            <div class="mothername">
+                <mat-form-field apprearance="fill">
+                    <mat-label>Mother Name</mat-label>
+                    <input type="text" matInput placeholder="Enter your mother name" formControlName="Mothername">
+                </mat-form-field>
+            </div>
+
+            <div class="gender">
+                <mat-label>Gender</mat-label>
+                <mat-radio-group aria-label="Select an option">
+                    <mat-radio-button value="1">Male</mat-radio-button>
+                    <mat-radio-button value="2">Female</mat-radio-button>
+                  </mat-radio-group>
+            </div>
+
+            <div class="nationality">
+                <mat-form-field apprearance="fill">
+                    <mat-label>Nationality</mat-label>
+                    <input type="text" matInput placeholder="Enter nationality" formControlName="Nationality">
+                </mat-form-field>
+            </div>
+
+            <div class="religion">
+                <mat-form-field apprearance="fill">
+                    <mat-label>Religion</mat-label>
+                    <input type="text" matInput placeholder="Enter religion" formControlName="Religion">
+                </mat-form-field>
+            </div>
+
+            <div class="mobile">
+                <mat-form-field apprearance="fill">
+                    <mat-label>Mobile Number</mat-label>
+                    <input type="number" matInput placeholder="Enter mobile" formControlName="Mobileno">
+                </mat-form-field>
+            </div>
+
+            <div class="alternateno">
+                <mat-form-field apprearance="fill">
+                    <mat-label>Alternate Number</mat-label>
+                    <input type="number" matInput placeholder="Enter alternateno" formControlName="AlternateNo">
+                </mat-form-field>
+            </div>
+
+            <div class="marital">
+                <mat-form-field apprearance="fill">
+                    <mat-label>Marital Status</mat-label>
+                    <input type="text" matInput placeholder="Enter marital status" formControlName="Maritalstatus">
+                </mat-form-field>
+            </div>
+
+            <div class="aadhar">
+                <mat-form-field apprearance="fill">
+                    <mat-label>Aadhar Number</mat-label>
+                    <input type="number" matInput placeholder="Enter your aadhar" formControlName="Aadharno">
+                </mat-form-field>
+            </div>
+
+            <div class="pan">
+                <mat-form-field apprearance="fill">
+                    <mat-label>PAN Number</mat-label>
+                    <input type="text" matInput placeholder="Enter yur PAN" formControlName="PANno">
+                </mat-form-field>
+            </div>
+
+            <div class="passport">
+                <mat-form-field apprearance="fill">
+                    <mat-label>Passport Number</mat-label>
+                    <input type="text" matInput placeholder="Enter passport number" formControlName="Passportno">
+                </mat-form-field>
+            </div>
+
+            <div class="doj">
+                <mat-form-field apprearance="fill">
+                    <mat-label>DOJ</mat-label>
+                    <input type="text" matInput placeholder="Enter doj" formControlName="Doj">
+                </mat-form-field>
+            </div>
+
+            <div class="typeid">
+                <mat-form-field apprearance="fill">
+                    <mat-label>TypeId</mat-label>
+                    <input type="text" matInput placeholder="Enter typeid" formControlName="TypeId">
+                </mat-form-field>
+            </div>
+
+            <div class="orgid">
+                <mat-form-field apprearance="fill">
+                    <mat-label>OrgId</mat-label>
+                    <input type="text" matInput placeholder="Enter orgid" formControlName="OrgId">
+                </mat-form-field>
+            </div>
+
+            <div class="branchid">
+                <mat-form-field apprearance="fill">
+                    <mat-label>BranchId</mat-label>
+                    <input type="text" matInput placeholder="Enter branchid" formControlName="BranchId">
+                </mat-form-field>
+            </div>
+
+            <div class="save">
+                <mat-card-actions>
+                    <button mat-raised-button color="primary"  [disabled]="isSubmit">Register</button>
+                </mat-card-actions>
+            </div>
+
+        </form>
+    </mat-card-content>
+</mat-card>
+</body>

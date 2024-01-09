@@ -1,0 +1,43 @@
+<mat-card class="leave-details">
+    <mat-card-title>Leave Details</mat-card-title>
+    <form *ngIf="leaveDetails && leaveDetails.length > 0">
+      <div class="table-container">
+        <table>
+          <thead>
+            <tr>
+              <th>Employee ID</th>
+              <th>Leave Type</th>
+              <th>From Date</th>
+              <th>To Date</th>
+              <th>No of Days</th>
+              <th>Reason</th>
+              <th>Description</th>
+              <th>Applied Date</th>
+              <th>Approval By</th>
+              <th>Status</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let detail of leaveDetails">
+              <td>{{ detail.emp_id }}</td>
+              <td>{{ detail.leave_type }}</td>
+              <td>{{ detail.from_date | date: 'yyyy-MM-dd' }}</td>
+              <td>{{ detail.to_date | date: 'yyyy-MM-dd' }}</td>
+              <td>{{ detail.no_of_days }}</td>
+              <td>{{ detail.reason }}</td>
+              <td>{{ detail.description }}</td>
+              <td>{{ detail.applied_date | date: 'yyyy-MM-dd' }}</td>
+              <td>{{ detail.approval_by }}</td>
+              <td>{{ detail.status }}</td>
+              <td>
+                <span class="icon edit-icon" (click)="editLeaveDetail(detail)"><i class="fas fa-edit"></i></span>
+                <span class="icon delete-icon" (click)="deleteLeaveDetail(detail)"><i class="fas fa-trash-alt"></i></span>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </form>
+  </mat-card>
+  
